@@ -30,13 +30,32 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+The biggest difference between .forEach() and .map() is that .map() returns a new array where .forEach() does not.
+
 2. What is the difference between a function and a method?
+
+A function can be passed arguments and called to return a certain set of data. A method can also be passed arguments and called to return a certain set of data, but only for the object it is associated with.
 
 3. What is closure?
 
+Closures allow us to lock in the value of a variable so it stays consistent within the function it’s being used in. We can then change variable values on the global scope without worrying about having to adjust every function it was used in to get the same return.
+It also allows for nested functions to be able to reference variables that fall within the parent function scope, but not necessarily the nested function scope. This helps with DRY code by preventing the need to continuously create the same instance of a variable for reference.
+
+
 4. Describe the four rules of the 'this' keyword.
 
+Global Binding: Anytime “this” is called it looks to the window object
+Implicit Binding: Implies that the context to the left of the invoked function is the “this” reference and pulls data from that source
+Explicit Binding: All “this” calls are assumed to be global so you have to explicitly state which function the data is coming from using .call(), .apply(), or .bind().
+	.call - uses specific inputs passed in as arguments one-by-one to immediately invoke the function
+	.apply - uses specific inputs that can be passed in as an array to immediately invoke the function
+	.bind - arguments are passed in one by one to create a new version of the function to be invoked at a later time
+New Binding: Can use the “new” keyword with constructor functions to pass in the necessary parameters to create a new object with data from the constructor function. “This” keywords then apply to that specific object data
+
+
 5. Why do we need super() in an extended class?
+
+We need super() in an extended class to call the parent constructor and inherit that data. It replaces the need to use a .call() method.
 
 ## Project Set up
 
